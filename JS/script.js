@@ -1,6 +1,12 @@
 $(document).ready(function(){
-  endpoint = "http://chilltec.net:4567/api/getTone";
+  var endpoint = "http://chilltec.net:4567/api/getTone";
   $("#submitMessage").on("click", function(){
+    checkTone();
+  });
+  
+  $("#textbox").bind("enterKey", checkTone());
+  
+  var checkTone = function(){
     userInput = $("#textbox").val();
     if (userInput != "" && userInput != undefined) {
       $.post(endpoint, userInput, function(data){
@@ -25,5 +31,5 @@ $(document).ready(function(){
         $("#response").html(toPrint);
       });
     }
-  });
+  };
 });
