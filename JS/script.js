@@ -4,7 +4,7 @@ $(document).ready(function(){
     checkTone();
   });
   
-  $("#textbox").bind("enterKey", checkTone());
+  //$("#textbox").bind("enterKey", checkTone());
   
   var checkTone = function(){
     userInput = $("#textbox").val();
