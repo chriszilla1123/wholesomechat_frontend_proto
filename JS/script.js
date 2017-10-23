@@ -5,6 +5,7 @@ $(document).ready(function(){
     console.log(userInput);
     if (userInput != "" && userInput != undefined) {
       $.post(endpoint, userInput, function(data){
+        console.log(data);
         $("#response").html(data);
         console.log("Success!");
       });
