@@ -4,8 +4,6 @@ $(document).ready(function(){
     userInput = $("#textbox").val();
     if (userInput != "" && userInput != undefined) {
       $.post(endpoint, userInput, function(data){
-        console.log(data);
-        //response = JSON.parse(data);
         toPrint = "";
         toPrint += "Emotional Tones:  <br>";
         toPrint += "Anger: " + data.tone_categories[0].tones[0].score;
@@ -25,7 +23,6 @@ $(document).ready(function(){
         toPrint += ", Emotional Range: " + data.tone_categories[2].tones[4].score;
         
         $("#response").html(toPrint);
-        console.log("test");
       });
     }
   });
