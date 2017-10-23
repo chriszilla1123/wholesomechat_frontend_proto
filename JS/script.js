@@ -11,6 +11,7 @@ $(document).ready(function(){
         toPrint += "Anger: " + response.tone_categories[0].tones[0].score;
         
         $("#response").html(toPrint);
+        console.log("test");
       });
     }
   });
