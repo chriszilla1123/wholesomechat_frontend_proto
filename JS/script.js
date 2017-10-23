@@ -7,8 +7,10 @@ $(document).ready(function(){
         console.log(data);
         response = JSON.parse(data);
         toPrint = "";
-        //$("#response").html(JSON.stringify(data));
-        toPring += ""
+        toPrint += "Emotions: \n";
+        toPrint += "Anger: " + response.tone_categories.0.tones.0.score;
+        
+        $("#response").html(toPrint);
       });
     }
   });
