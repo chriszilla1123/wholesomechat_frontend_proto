@@ -6,6 +6,7 @@ $(document).ready(function(){
     if (userInput != "" && userInput != undefined) {
       $.post(endpoint, userInput, function(data){
         $("#response").html(data);
+        console.log("Success!");
       });
     }
   });
