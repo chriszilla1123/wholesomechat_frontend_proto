@@ -7,8 +7,7 @@ $(document).ready(function(){
         console.log(data);
         //response = JSON.parse(data);
         toPrint = "";
-        toPrint += "Emotions:
-        ";
+        toPrint += "Emotions:  <br>";
         toPrint += "Anger: " + data.tone_categories[0].tones[0].score;
         
         $("#response").html(toPrint);
